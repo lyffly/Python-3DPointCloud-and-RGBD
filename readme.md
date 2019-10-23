@@ -16,36 +16,36 @@ Doc: http://www.open3d.org/docs/release/
 
 整理后的例程
 
-| 序号 | 文件名                                 | 链接 |
-| :--: | -------------------------------------- | ---- |
-|  1   | 1_read_pcd.py                          |      |
-|  2   | 2_read_ply.py                          |      |
-|  3   | 3_read_jpg.py                          |      |
-|  4   | 4_usage_of_pointcloud.py               |      |
-|  5   | 5_crop_pointcloud.py                   |      |
-|  6   | 6_paint_pointcloud.py                  |      |
-|  7   | 7_usage_of_mesh.py                     |      |
-|  8   | 8_paint_mesh.py                        |      |
-|  9   | 9_read_rgbd.py                         |      |
-|  10  | 10_read_sun_rgbd.py                    |      |
-|  11  | 11_read_TUM_rgbd.py                    |      |
-|  12  | 12_RGBD_odometry.py                    |      |
-|  13  | 13_RGBD_odometry_hybrid.py             |      |
-|  14  | 14_visualization.py                    |      |
-|  15  | 15_KDTree.py                           |      |
-|  16  | 16_ICP_registration_point2point.py     |      |
-|  17  | 17_ICP_registration_point2plane.py     |      |
-|  18  | 18_work_with_numpy.py                  |      |
-|  19  | 19_remove_outlier_cloud_point.py       |      |
-|  20  | 20_colored_point_cloud_registration.py |      |
-|  21  | 21_global_registration.py              |      |
-|  22  | 22_fast_global_registration.py         |      |
-|  23  | 23_multiway_registration.py            |      |
-|  24  | 24_rgb_integration.py                  |      |
-|  25  | 25_color_map_optiization.py            |      |
-|  26  | 26_customized_visualization.py         |      |
-|  27  | 27_non_blocking_visualization.py       |      |
-|  28  | 28_iteractive_visualization.py         |      |
+| 序号 | 文件名                                 | 描述              |
+| :--: | -------------------------------------- | ----------------- |
+|  1   | 1_read_pcd.py                          | 读取pcd格式的文件 |
+|  2   | 2_read_ply.py                          | 读取ply格式的文件 |
+|  3   | 3_read_jpg.py                          | 读图片            |
+|  4   | 4_usage_of_pointcloud.py               | 点云的使用        |
+|  5   | 5_crop_pointcloud.py                   | 点云的剪切        |
+|  6   | 6_paint_pointcloud.py                  | 点云着色          |
+|  7   | 7_usage_of_mesh.py                     | 曲面的使用        |
+|  8   | 8_paint_mesh.py                        | 曲面着色          |
+|  9   | 9_read_rgbd.py                         | 读取rgbd数据      |
+|  10  | 10_read_sun_rgbd.py                    | 读SUN的数据集     |
+|  11  | 11_read_TUM_rgbd.py                    | 读TUM的数据集     |
+|  12  | 12_RGBD_odometry.py                    |                   |
+|  13  | 13_RGBD_odometry_hybrid.py             |                   |
+|  14  | 14_visualization.py                    |                   |
+|  15  | 15_KDTree.py                           |                   |
+|  16  | 16_ICP_registration_point2point.py     |                   |
+|  17  | 17_ICP_registration_point2plane.py     |                   |
+|  18  | 18_work_with_numpy.py                  |                   |
+|  19  | 19_remove_outlier_cloud_point.py       |                   |
+|  20  | 20_colored_point_cloud_registration.py |                   |
+|  21  | 21_global_registration.py              |                   |
+|  22  | 22_fast_global_registration.py         |                   |
+|  23  | 23_multiway_registration.py            |                   |
+|  24  | 24_rgb_integration.py                  |                   |
+|  25  | 25_color_map_optiization.py            |                   |
+|  26  | 26_customized_visualization.py         |                   |
+|  27  | 27_non_blocking_visualization.py       |                   |
+|  28  | 28_iteractive_visualization.py         |                   |
 
 
 
@@ -61,17 +61,19 @@ https://github.com/IntelRealSense/librealsense/tree/master/wrappers/python/examp
 
 整理的例程
 
-| 序号 | 文件名                     | 链接 |
-| :--: | -------------------------- | ---- |
-|  1   | 1_read_depth.py            |      |
-|  2   | 2_read_rgbd_with_config.py |      |
-|  3   | 3                          |      |
-|  4   |                            |      |
-|  5   |                            |      |
+| 序号 | 文件名                     | 描述                   |
+| :--: | -------------------------- | ---------------------- |
+|  1   | 1_read_depth.py            | 获取相机的深度数据     |
+|  2   | 2_read_rgbd_with_config.py | 获取相机的RGBD数据     |
+|  3   | 3_align_depth_to_color.py  | 深度数据和颜色数据对齐 |
+|  4   |                            |                        |
+|  5   |                            |                        |
 
+三、transform3d
 
+Github:  https://github.com/matthew-brett/transforms3d
 
-
+Doc: http://matthew-brett.github.io/transforms3d
 
 
 
