@@ -20,8 +20,8 @@ Doc: http://www.open3d.org/docs/release/
 | 2    | 2_read_ply.py            |      |
 | 3    | 3_read_jpg.py            |      |
 | 4    | 4_usage_of_pointcloud.py |      |
-| 5    |                          |      |
-| 6    |                          |      |
+| 5    | 5_crop_pointcloud.py     |      |
+| 6    | 6_paint_pointcloud.py    |      |
 | 7    |                          |      |
 | 8    |                          |      |
 | 9    |                          |      |
@@ -53,6 +53,18 @@ Doc: http://www.open3d.org/docs/release/
 | 35   |                          |      |
 
 二、realsense camera
+
+Web: https://software.intel.com/zh-cn/realsense
+
+Github:https://github.com/IntelRealSense/librealsense
+
+Python Example: 
+
+https://github.com/IntelRealSense/librealsense/tree/master/wrappers/python/examples
+
+
+
+
 
 
 
