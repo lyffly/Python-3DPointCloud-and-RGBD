@@ -11,18 +11,20 @@ if __name__ == "__main__":
     pinhole_camera_intrinsic =op3.io.read_pinhole_camera_intrinsic("demodata/camera_primesense.json")
     print(pinhole_camera_intrinsic.intrinsic_matrix)
 
-    #read sun datasets
+    #读 2组 图片数据
     source_color = op3.io.read_image('demodata/RGBD/color/00000.jpg')
     source_depth = op3.io.read_image('demodata/RGBD/depth/00000.png')
     target_color = op3.io.read_image('demodata/RGBD/color/00001.jpg')
     target_depth = op3.io.read_image('demodata/RGBD/depth/00001.png')
     
+    # rgbd 转换
     source_rgbd_image = op3.geometry.RGBDImage.create_from_color_and_depth(
         source_color,source_depth
     )
     target_rgbd_image = op3.geometry.RGBDImage.create_from_color_and_depth(
         target_color,target_depth
     )
+    # 生成点云
     target_pcd = op3.geometry.PointCloud.create_from_rgbd_image(
         target_rgbd_image,
         pinhole_camera_intrinsic
@@ -37,7 +39,7 @@ if __name__ == "__main__":
         target_rgbd_image,
         pinhole_camera_intrinsic,
         odo_init,
-        op3.odometry.RGBDOdometryJacobianFromHybridTerm(),
+        op3.odometry.RGBDOdometryJacobianFromHybridTerm(), # hybrid
         option
     )
 
