@@ -29,7 +29,7 @@ def draw_registration_result(source,target,transformation):
 
 
 if __name__ == "__main__":    
-    # load a point cloud and paint it gray
+    # load a point cloud
     source =op3.io.read_point_cloud("demodata/ICP/cloud_bin_0.pcd")
     target =op3.io.read_point_cloud("demodata/ICP/cloud_bin_1.pcd")
     threshold=0.02

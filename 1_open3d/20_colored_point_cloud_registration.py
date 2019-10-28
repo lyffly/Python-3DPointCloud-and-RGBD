@@ -18,7 +18,7 @@ def draw_registration_result_origin_color(source,target,transformation):
 
 if __name__ == "__main__":
     
-    #1. 读两种点云数据，现实初始姿态
+    #1. 读两种点云数据，显示初始姿态
 
     source = op3.io.read_point_cloud("demodata/ColoredICP/frag_115.ply")
     target = op3.io.read_point_cloud("demodata/ColoredICP/frag_116.ply")
@@ -29,7 +29,7 @@ if __name__ == "__main__":
     current_transformation = np.identity(4)
     draw_registration_result_origin_color(source,target,current_transformation)
     
-    # point-to-plane ICP
+    # point-to-plane ICP 初始值
     current_transformation = np.identity(4)
     # 2. 点到面 ICP 
     result_icp = op3.registration.registration_icp(
@@ -47,6 +47,7 @@ if __name__ == "__main__":
     max_iter=[50,30,14]
     current_transformation = np.identity(4)
     # 3. colored pointcloud registration
+    # 着色点云配准
     
     for scale in range(3):
         iter = max_iter[scale]
@@ -54,10 +55,12 @@ if __name__ == "__main__":
         print([iter,radius,scale])
 
         print("3.1 downsample with a voxel size of %.2f" % radius)
+        # 下采样
         source_down = source.voxel_down_sample(radius)
         target_down = target.voxel_down_sample(radius)
 
         print("3.2 Estimate normal.")
+        # 算法向量
         source_down.estimate_normals(
             op3.geometry.KDTreeSearchParamHybrid(radius=radius*2,max_nn=30)
         )
@@ -66,6 +69,7 @@ if __name__ == "__main__":
         )
 
         print("3.3 Applying colored point cloud registration")
+        # color icp过程
         result_icp = op3.registration.registration_colored_icp(
             source_down,
             target_down,
