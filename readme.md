@@ -1,12 +1,14 @@
 # 3D点云及RGBD 处理学习记录
 
-### 语言：python
+##### 整理和编码：刘云飞 
 
-### 主要库：open3d , pyrealsense 
+##### 编程语言：python
+
+##### 主要库：open3d , pyrealsense 
 
 
 
-一、open3d
+### 一、open3d
 
 GitHub :https://github.com/intel-isl/Open3D
 
@@ -49,7 +51,7 @@ Doc: http://www.open3d.org/docs/release/
 
 
 
-二、realsense camera
+### 二、realsense camera
 
 Web: https://software.intel.com/zh-cn/realsense
 
@@ -71,7 +73,7 @@ https://github.com/IntelRealSense/librealsense/tree/master/wrappers/python/examp
 
 Demo视频：
 
- [image]( https://github.com/lyffly/Python-3DPointCloud-and-RGBD/blob/master/imgs/demo.gif)
+ ![image]( imgs/demo.gif)
 
 三、transform3d
 
