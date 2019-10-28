@@ -41,13 +41,12 @@ try:
         color = aligned_frames.get_color_frame()
         if depth is None or color is None:
             continue
-        #print(depth.get_distance(100,200))
+        
         depth_image = np.asarray(depth.get_data())
         color_image = np.asarray(color.get_data())
 
         img_depth = op3.geometry.Image(depth_image)
         img_color = op3.geometry.Image(color_image)
-        #depth_color = cv2.applyColorMap(cv2.convertScaleAbs(depth_image,alpha=0.03),cv2.COLORMAP_JET)
         
         rgbd_image = op3.geometry.RGBDImage.create_from_color_and_depth(img_color,img_depth,convert_rgb_to_intensity=False)
         
@@ -61,17 +60,23 @@ try:
                 rgbd_image,
                 pinhole_camera_intrinsic
         )
-        pointcloud.points = pcd.points
-        pointcloud.colors = pcd.colors
-                
+        pcd_down = pcd.voxel_down_sample(0.015)
+
+        pointcloud.points = pcd_down.points
+        pointcloud.colors = pcd_down.colors
+        print(np.asarray(pcd.points).shape)
+        
+        #print(np.asarray(pcd.points).shape)
+        print(np.asarray(pointcloud.points).shape)
+
+
         #print(np.asarray(pointcloud.points).shape)
-        #print(np.asarray(pointcloud.colors).shape)
         
         if add_once == False:
             vis.add_geometry(pointcloud)
             add_once = True
             
-        if i == 60:
+        if i == 100060:
             op3.io.write_point_cloud("demo.pcd",pointcloud)
             print("[-------important------] write done")
 
@@ -81,10 +86,11 @@ try:
         vis.poll_events()
         vis.update_renderer()
 
-        dt = time.time()-t1
+        dt = time.time() - t1
         print("[INFO] FPS: ",str(int(1.0/dt)))
 
-   
+
+
 except Exception as e:
     print(e)
     pass

@@ -49,7 +49,9 @@ Doc: http://www.open3d.org/docs/release/
 |  27  | 27_non_blocking_visualization.py       |                   |
 |  28  | 28_iteractive_visualization.py         |                   |
 
+ICP demo:
 
+![image](imgs/icp_demo.gif)
 
 ### 二、realsense camera
 

@@ -38,12 +38,13 @@ if __name__ == "__main__":
     target.transform(flip_tranform)
 
     vis =op3.visualization.Visualizer()
-    vis.create_window()
+    vis.create_window(width=1280,height=720)
     vis.add_geometry(source)
     vis.add_geometry(target)
     threshold =0.05
     icp_iteration =200
     save_image = False
+    time.sleep(6)
     for i in range(icp_iteration):
         reg_p2l = op3.registration.registration_icp(
             source,
@@ -57,7 +58,7 @@ if __name__ == "__main__":
         vis.update_geometry()
         vis.poll_events()
         vis.update_renderer()
-        time.sleep(0.1)
+        time.sleep(0.05)
         if save_image:
             vis.capture_screen_image("temp_%04d.jpg" %i)
     vis.destroy_window()
