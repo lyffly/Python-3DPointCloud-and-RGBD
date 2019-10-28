@@ -61,13 +61,17 @@ https://github.com/IntelRealSense/librealsense/tree/master/wrappers/python/examp
 
 整理的例程
 
-| 序号 | 文件名                     | 描述                   |
-| :--: | -------------------------- | ---------------------- |
-|  1   | 1_read_depth.py            | 获取相机的深度数据     |
-|  2   | 2_read_rgbd_with_config.py | 获取相机的RGBD数据     |
-|  3   | 3_align_depth_to_color.py  | 深度数据和颜色数据对齐 |
-|  4   |                            |                        |
-|  5   |                            |                        |
+| 序号 | 文件名                     | 描述                      |
+| :--: | -------------------------- | ------------------------- |
+|  1   | 1_read_depth.py            | 获取相机的深度数据        |
+|  2   | 2_read_rgbd_with_config.py | 获取相机的RGBD数据        |
+|  3   | 3_align_depth_to_color.py  | 深度数据和颜色数据对齐    |
+|  4   | 4_realsense_with_open3d.py | Realsense和open3d组合使用 |
+|  5   |                            |                           |
+
+Demo视频：
+
+ [image]( https://github.com/lyffly/Python-3DPointCloud-and-RGBD/blob/master/imgs/demo.gif)
 
 三、transform3d
 
