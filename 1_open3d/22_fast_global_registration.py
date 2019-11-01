@@ -75,6 +75,7 @@ def execute_global_registration(source_down,target_down,\
     )
     return result
 
+# 快速全局配准算法
 def execute_fast_global_registration(source_down,target_down,\
     source_fpfh,target_fpfh,voxel_size):
     distance_threshold = voxel_size*0.5
@@ -128,7 +129,7 @@ if __name__ == "__main__":
         voxel_size
     )
 
-    print("Fast time is %.3f " % (time.time()-start))
+    print("快速算法耗时 is %.3f " % (time.time()-start))
 
     draw_registration_result(source_down,target_down,result_fast.transformation)
 
