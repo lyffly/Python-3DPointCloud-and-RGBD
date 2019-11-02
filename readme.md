@@ -101,7 +101,6 @@ ORB-SLAM 论文：https://arxiv.org/abs/1502.00956
 
 ORB-SLAM2 论文:https://128.84.21.199/pdf/1610.06475.pdf
 
-
-
+本人用ORB SLAM2 跑RGBD数据集的视频：[B站视频链接](https://www.bilibili.com/video/av74239092/)
 
 
